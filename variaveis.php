@@ -17,7 +17,10 @@
         $peso = 95.5;
         //boolean
         $fumante_sn = false; //(true = 1) ou (false = vazio)
-
+        // modificando valores
+        $idade = 44;
+        //modificando a tipagem
+        $idade = '44';
     ?>
         <h1>Ficha cadastral</h1>
         <br>
