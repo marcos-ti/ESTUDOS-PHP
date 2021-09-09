@@ -11,14 +11,23 @@
 <body>
     <?php
         // Usuario com cartao e compra > 100, frete gratis
-        $usu_cart_loja = true;
-        $valor_compra = 100;
+        $usu_cart_loja = false;
+        $valor_compra = 5000;
         $valor_frete = 30;
-        $recebeu_desconto_frete = false;
+        $recebeu_desconto_frete = true;
 
-        if($usu_cart_loja && $valor_compra >= 100){
+        if($usu_cart_loja && $valor_compra >= 400){
             $valor_frete = 0;
-            $recebeu_desconto_frete = true;
+
+        } else if($usu_cart_loja && $valor_compra >= 300) {
+            $valor_frete = 10;
+
+        } else if($usu_cart_loja && $valor_compra >= 100) {
+            $valor_frete = 25;
+
+        } else {
+            $recebeu_desconto_frete = false;
+
         }
     ?>
 
